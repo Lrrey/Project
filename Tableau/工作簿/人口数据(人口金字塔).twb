@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0221.0754                               -->
+<workbook original-version='18.1' source-build='2019.4.4 (20194.20.0221.0754)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (人口数据)' inline='true' name='federated.1iyfd341pesmaq121u5qb1ka6t6j' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='人口数据' name='excel-direct.0iqx75504u3yn1127wqmk03buzkt'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/学习/Tableau/数据/人口数据.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0iqx75504u3yn1127wqmk03buzkt' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:F8773:no:A1:F8773:0' header='yes' outcome='2'>
+            <column datatype='string' name='Division' ordinal='0' />
+            <column datatype='string' name='Name' ordinal='1' />
+            <column datatype='string' name='Region' ordinal='2' />
+            <column datatype='string' name='Age' ordinal='3' />
+            <column datatype='string' name='Gender' ordinal='4' />
+            <column datatype='integer' name='ESTBASE2010' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Division</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Division]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Division</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Region]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Region</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ESTBASE2010</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ESTBASE2010]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>ESTBASE2010</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F8773:no:A1:F8773:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' caption='年龄' datatype='integer' name='[Calculation_309903951066447877]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='IF [Age]=&quot;85+&quot; THEN 85 ELSE INT([Age]) END' />
+      </column>
+      <column caption='男性人数' datatype='integer' name='[Calculation_309903951068209158]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Gender]=&quot;Male&quot; THEN [ESTBASE2010] ELSE 0 END' />
+      </column>
+      <column caption='Counts' datatype='integer' name='[ESTBASE2010]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='年龄 (数据桶)' datatype='integer' name='[年龄 (数据桶)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[Calculation_309903951066447877]' peg='0' size='10' />
+      </column>
+      <column caption='女性人数' datatype='integer' name='[男性人数 (复制)_309903951068389383]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [Gender]=&quot;Female&quot; THEN [ESTBASE2010] ELSE 0 END' />
+      </column>
+      <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.359562' measure-ordering='alphabetic' measure-percentage='0.640438' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Gender:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='人口金字塔'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (人口数据)' name='federated.1iyfd341pesmaq121u5qb1ka6t6j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1iyfd341pesmaq121u5qb1ka6t6j'>
+            <column datatype='string' name='[Age]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='年龄' datatype='integer' name='[Calculation_309903951066447877]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='IF [Age]=&quot;85+&quot; THEN 85 ELSE INT([Age]) END' />
+            </column>
+            <column caption='男性人数' datatype='integer' name='[Calculation_309903951068209158]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Gender]=&quot;Male&quot; THEN [ESTBASE2010] ELSE 0 END' />
+            </column>
+            <column caption='Counts' datatype='integer' name='[ESTBASE2010]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
+            <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
+            <column-instance column='[年龄 (数据桶)]' derivation='None' name='[none:年龄 (数据桶):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Calculation_309903951068209158]' derivation='Sum' name='[sum:Calculation_309903951068209158:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[男性人数 (复制)_309903951068389383]' derivation='Sum' name='[sum:男性人数 (复制)_309903951068389383:qk]' pivot='key' type='quantitative' />
+            <column caption='年龄 (数据桶)' datatype='integer' name='[年龄 (数据桶)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[Calculation_309903951066447877]' peg='0' size='10' />
+            </column>
+            <column caption='女性人数' datatype='integer' name='[男性人数 (复制)_309903951068389383]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [Gender]=&quot;Female&quot; THEN [ESTBASE2010] ELSE 0 END' />
+            </column>
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:年龄 (数据桶):ok]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:年龄 (数据桶):ok]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[sum:男性人数 (复制)_309903951068389383:qk]' field-type='quantitative' reverse='true' scope='cols' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:Gender:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[sum:男性人数 (复制)_309903951068389383:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:Gender:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[sum:Calculation_309903951068209158:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:Gender:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:年龄 (数据桶):ok]</rows>
+        <cols>([federated.1iyfd341pesmaq121u5qb1ka6t6j].[sum:男性人数 (复制)_309903951068389383:qk] + [federated.1iyfd341pesmaq121u5qb1ka6t6j].[sum:Calculation_309903951068209158:qk])</cols>
+        <show-full-range>
+          <column>[federated.1iyfd341pesmaq121u5qb1ka6t6j].[年龄 (数据桶)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{3D191BFE-E223-4E57-8140-F1C3F7727EE3}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='人口金字塔'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:Gender:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:Gender:nk]</field>
+            <field>[federated.1iyfd341pesmaq121u5qb1ka6t6j].[none:年龄 (数据桶):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CE5A3661-27AD-402C-A0C9-BC1953A9E442}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='人口金字塔' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

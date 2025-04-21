@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0221.0754                               -->
+<workbook original-version='18.1' source-build='2019.4.4 (20194.20.0221.0754)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (流量转化数据)' inline='true' name='federated.0b61m9y0vngu731c56xiz16memxp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='流量转化数据' name='excel-direct.0n9oxaz1qwhgxi1alohc10leudbi'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/学习/Tableau/数据/流量转化数据.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0n9oxaz1qwhgxi1alohc10leudbi' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C9:no:A1:C9:0' header='yes' outcome='6'>
+            <column datatype='integer' name='数量' ordinal='0' />
+            <column datatype='string' name='阶段' ordinal='1' />
+            <column datatype='integer' name='销售周期' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>数量</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[数量]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>数量</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>阶段</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[阶段]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>阶段</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LZH_RCN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>销售周期</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[销售周期]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>销售周期</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C9:no:A1:C9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[阶段]' role='dimension' type='nominal' />
+      <column-instance column='[阶段]' derivation='None' name='[none:阶段:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.469124' measure-ordering='alphabetic' measure-percentage='0.530877' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:阶段:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;成交单数&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;客服咨询数量&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;关注新增人数&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;公众号访问量&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='流量转化漏斗图'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (流量转化数据)' name='federated.0b61m9y0vngu731c56xiz16memxp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0b61m9y0vngu731c56xiz16memxp'>
+            <column-instance column='[阶段]' derivation='None' name='[none:阶段:nk]' pivot='key' type='nominal' />
+            <column-instance column='[数量]' derivation='Sum' name='[pcva:sum:数量:qk:2]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Columns' type='PctValue'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[数量]' derivation='Sum' name='[pcva:sum:数量:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' ordering-type='Columns' type='PctValue'>
+                <address>
+                  <value>-2</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[数量]' derivation='Sum' name='[sum:数量:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[数量]' role='measure' type='quantitative' />
+            <column datatype='string' name='[阶段]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;公众号访问量&quot;</bucket>
+              <bucket>&quot;关注新增人数&quot;</bucket>
+              <bucket>&quot;客服咨询数量&quot;</bucket>
+              <bucket>&quot;成交单数&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' field-type='quantitative' fold='true' scope='cols' synchronized='true' type='space' />
+            <encoding attr='space' class='3' field='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' field-type='quantitative' fold='true' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' field-type='quantitative' reverse='true' scope='cols' type='space' />
+            <format attr='display' class='1' field='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' scope='cols' value='false' />
+            <format attr='display' class='3' field='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' scope='cols' value='false' />
+            <format attr='display' class='1' field='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk]' scope='cols' value='false' />
+            <format attr='display' class='3' field='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk]' scope='cols' value='false' />
+            <format attr='display' class='1' field='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk:2]' scope='cols' value='false' />
+            <format attr='display' class='3' field='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk:2]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+              <text column='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' x-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+              <text column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' x-index='2'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' x-axis-name='[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]' x-index='3'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' />
+              <text column='[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk:2]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]</rows>
+        <cols>([federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk] + ([federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk] + ([federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk] + [federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk])))</cols>
+      </table>
+      <simple-id uuid='{3B03FE6F-F378-4F30-9D75-1B795E89E3DD}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' maximized='true' name='流量转化漏斗图'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor x-index='2'>
+                  <x-fields x-index='2'>
+                    <field>[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]</field>
+                  </x-fields>
+                  <y-fields x-index='2'>
+                    <field>[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]</field>
+                  <field>[federated.0b61m9y0vngu731c56xiz16memxp].[sum:数量:qk]</field>
+                  <field>[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk:2]</field>
+                  <field>[federated.0b61m9y0vngu731c56xiz16memxp].[pcva:sum:数量:qk]</field>
+                  <field>[federated.0b61m9y0vngu731c56xiz16memxp].[usr:RunningOrderColumn_457396838867677186:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;公众号访问量&quot;</value>
+                <value>22112</value>
+                <value>%null%</value>
+                <value>1.0</value>
+                <value>1</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0b61m9y0vngu731c56xiz16memxp].[none:阶段:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EC0B63FD-0F7E-4225-B117-5BB8243DDF29}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='流量转化漏斗图' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
